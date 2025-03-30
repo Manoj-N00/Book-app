@@ -3,7 +3,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.routes';
 import { errorHandler, routeMiddleware } from './middleware';
-import { clientUse } from 'valid-ip-scope';
 import { PrismaClient } from '@prisma/client'; // Import PrismaClient
 
 dotenv.config();
@@ -16,7 +15,6 @@ app.use(cors());
 app.use(express.json());
 
 // Route Middleware
-app.use(clientUse());
 app.use(routeMiddleware);
 
 

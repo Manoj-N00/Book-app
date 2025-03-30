@@ -39,7 +39,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const fetchUserProfile = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/auth/profile');
+      const response = await axios.get('https://book-app-vfto.onrender.com/api/auth/profile');
       setUser(response.data);
       setIsAuthenticated(true);
     } catch (error) {
@@ -50,7 +50,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://book-app-vfto.onrender.com/api/auth/login', {
         email,
         password,
       });
@@ -66,7 +66,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const register = async (name: string, email: string, password: string) => {
     try {
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post('https://book-app-vfto.onrender.com/api/auth/register', {
         name,
         email,
         password,

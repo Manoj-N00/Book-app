@@ -10,7 +10,7 @@ export interface Book {
   updatedAt: string;
 }
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://book-app-vfto.onrender.com/api';
 
 export const bookService = {
   getBooks: async (): Promise<Book[]> => {
